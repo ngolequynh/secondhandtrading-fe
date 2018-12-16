@@ -15,9 +15,11 @@ Frontend App - Second Hand Trading
   - in terminal: npm i cors
   - in index.js: 
     - add these line
+    
       const cors = require("cors");
+      
       app.use(cors());
-    - change passport in backend to 8080
+    - change port in backend to 8080
   
  ## Function
  
