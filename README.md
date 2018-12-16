@@ -10,7 +10,8 @@ Frontend App - Second Hand Trading
   - npm start
   
   Project only run if the server is already run. Link for secondhandtrading backend: https://github.com/NyHuynh/secondhandtrading-be.git
-  IN backend project
+  
+  In backend project
   - in terminal: npm i cors
   - in index.js: 
     - add these line
