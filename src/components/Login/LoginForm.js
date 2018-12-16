@@ -27,7 +27,6 @@ class LoginForm extends React.Component {
             <GoogleLogin />
             <FacebookLogin />
           </div>
-          {/*<div className="login-round-button-row"><GoogleLogin /></div>*/}
           <div className="footer">
             <h2 className="h2">A product of</h2>
             <h3 className="h3">Team 9</h3>

@@ -3,13 +3,11 @@ import Button from "@material-ui/core/Button";
 
 class FacebookLogin extends React.Component {
   onLogin = () => {
-    // window.open(
-    //   process.env.API_URL + "auth/facebook",
-    //   "name",
-    //   "height=500,width=500, location=0"
-    // );
-    const url = process.env.API_URL;
-    alert(url);
+    window.open(
+      process.env.REACT_APP_API_URL + "auth/facebook",
+      "name",
+      "height=500, width=500, location=0"
+    );
   };
   render() {
     return (

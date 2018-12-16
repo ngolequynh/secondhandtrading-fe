@@ -1,12 +1,14 @@
 import * as React from "react";
 import { Route, Redirect } from "react-router-dom";
 import { withRouter } from "react-router";
+import UserService from "./../../services/UserService";
 
 export class AuthRoute extends React.Component {
   // set access token into local storage
   setAccessToken = accessToken => {
     const token = accessToken.substring(7, accessToken.length);
     localStorage.setItem("accessToken", token);
+    this.getInfo();
   };
 
   // refresh page after login
@@ -15,6 +17,14 @@ export class AuthRoute extends React.Component {
     opener.location.reload(); // reload your login page
     window.close(); // close pop up window
   };
+
+  getInfo() {
+    UserService.getInfo().then(response => {
+      localStorage.setItem("fullName", response.data.google.name);
+      localStorage.setItem("avatar", response.data.google.avatar);
+      localStorage.setItem("userId", response.data._id);
+    });
+  }
 
   render() {
     const { component: Component, ...rest } = this.props;
