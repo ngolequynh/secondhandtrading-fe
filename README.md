@@ -11,11 +11,12 @@ Frontend App - Second Hand Trading
   
   Project only run if the server is already run. Link for secondhandtrading backend: https://github.com/NyHuynh/secondhandtrading-be.git
   IN backend project
-  - change passport in backend to 8080
   - in terminal: npm i cors
-  - in index.js: add these line
-    const cors = require("cors");
-    app.use(cors());
+  - in index.js: 
+    - add these line
+      const cors = require("cors");
+      app.use(cors());
+    - change passport in backend to 8080
   
  ## Function
  
