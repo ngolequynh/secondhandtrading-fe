@@ -42,7 +42,7 @@ class DrawerAppBar extends React.Component {
   };
 
   logout = () => {
-    localStorage.removeItem("accessToken");
+    localStorage.clear();
     // eslint-disable-next-line no-restricted-globals
     location.reload();
   };

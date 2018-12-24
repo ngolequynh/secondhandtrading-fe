@@ -13,9 +13,12 @@ export class AuthRoute extends React.Component {
 
   // refresh page after login
   closeAndRefresh = () => {
+    /* Can not reload when deploy*/
     // eslint-disable-next-line no-restricted-globals
-    opener.location.reload(); // reload your login page
-    window.close(); // close pop up window
+    // opener.location.reload(); // reload your login page
+    // window.close(); // close pop up window
+
+    window.location.href = `${process.env.HOME_PAGE}`;
   };
 
   getInfo() {
