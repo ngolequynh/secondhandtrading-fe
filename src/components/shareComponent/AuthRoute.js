@@ -21,13 +21,13 @@ export class AuthRoute extends React.Component {
     window.location.href = `${process.env.HOME_PAGE}`;
   };
 
-  getInfo() {
-    UserService.getInfo().then(response => {
+  getInfo = async () => {
+    await UserService.getInfo().then(response => {
       localStorage.setItem("fullName", response.data.google.name);
       localStorage.setItem("avatar", response.data.google.avatar);
       localStorage.setItem("userId", response.data._id);
     });
-  }
+  };
 
   render() {
     const { component: Component, ...rest } = this.props;

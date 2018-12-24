@@ -3,11 +3,13 @@ import Button from "@material-ui/core/Button";
 
 class GoogleLogin extends React.Component {
   onLogin = () => {
-    window.open(
-      process.env.REACT_APP_API_URL + "auth/google",
-      "name",
-      "height=500, width=500, location=0"
-    );
+    // window.open(
+    //   process.env.REACT_APP_API_URL + "auth/google",
+    //   "name",
+    //   "height=500, width=500, location=0"
+    // );
+    window.location.href = `
+      ${process.env.REACT_APP_API_URL}auth/google`;
   };
   render() {
     return (
